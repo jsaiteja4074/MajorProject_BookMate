@@ -1,0 +1,79 @@
+version: "3.1"
+
+rules:
+  # Rule: Say goodbye anytime the user says goodbye
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Rule: Respond to a bot challenge
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  # Rule: Respond to greetings
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Rule: Cheer up a sad user
+  - rule: Cheer up a user who is unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+
+  # Rule: Confirm help was useful
+  - rule: Respond positively if the user says it helped
+    condition:
+      - active_loop: null
+    steps:
+      - intent: affirm
+      - action: utter_affirm  # updated from utter_happy
+
+  # Rule: Handle denial after cheering up
+  - rule: Respond negatively if the user says it didn't help
+    condition:
+      - active_loop: null
+    steps:
+      - intent: deny
+      - action: utter_goodbye  # Updated to match the story
+
+  # Rule: Recommend fiction books
+  - rule: Recommend fiction books when requested
+    steps:
+      - intent: fiction
+      - action: utter_fiction
+
+  # Rule: Recommend poetry books
+  - rule: Recommend poetry books when requested
+    steps:
+      - intent: poetry
+      - action: utter_poetry
+
+  # Rule: Recommend children's animations
+  - rule: Recommend children's animations when requested
+    steps:
+      - intent: children_animation
+      - action: utter_children_animation
+
+  # Rule: Recommend drama books
+  - rule: Recommend drama books when requested
+    steps:
+      - intent: drama
+      - action: utter_drama
+
+  # Rule: Recommend graphic novels
+  - rule: Recommend graphic novels when requested
+    steps:
+      - intent: graphic
+      - action: utter_graphic
+
+  # Rule: Recommend adventure books
+  - rule: Recommend adventure books when requested
+    steps:
+      - intent: adventure
+      - action: utter_adventure

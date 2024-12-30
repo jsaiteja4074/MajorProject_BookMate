@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMate - Your Chatbot Companion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #c7f5fa, #e2fcf7);
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #74d4e0;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007e92;
+        }
+
+        .container {
+            text-align: center;
+            margin: 30px;
+            padding: 20px;
+        }
+
+        .container img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .container h2 {
+            font-size: 1.8rem;
+            color: #007e92;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #74d4e0;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BookMate: A Chatbot Companion for Book Recommendations</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/chatbot">Let's Chat!</a>
+        <a href="/contactus">Contact</a>
+    </nav>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='imgs/bothome.jpeg') }}" alt="Chatbot illustration">
+        <h2>Welcome to BookMate</h2>
+        <p>Discover your next favorite book with personalized recommendations. Chat with BookMate today and explore a world of literature!</p>
+    </div>
+
+    <footer>
+        <p>© 2024 BookMate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

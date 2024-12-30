@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy  # Action changed to reflect the proper affirmation action
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_affirm # Corrected to utter_affirm
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+      # - action: utter_deny  # updated from utter_goodbye  # Action corrected to reflect denial
+
+  - story: recommend fiction and poetry
+    steps:
+      - intent: fiction
+      - action: utter_fiction
+      - intent: poetry
+      - action: utter_poetry
+
+  - story: recommend children animation and drama
+    steps:
+      - intent: children_animation
+      - action: utter_children_animation
+      - intent: drama
+      - action: utter_drama
+
+  - story: recommend graphic novels and adventure
+    steps:
+      - intent: graphic
+      - action: utter_graphic
+      - intent: adventure
+      - action: utter_adventure
+
+  - story: recommend horror and mystery
+    steps:
+      - intent: horror
+      - action: utter_horror
+      - intent: mystery
+      - action: utter_mystery
+
+  - story: recommend fantasy and thriller
+    steps:
+      - intent: fantasy
+      - action: utter_fantasy
+      - intent: thriller
+      - action: utter_thriller
+
+  - story: recommend psychological thriller and romance
+    steps:
+      - intent: psychological_thriller
+      - action: utter_psychological_thriller
+      - intent: romance
+      - action: utter_romance
+
+  - story: recommend self-help and non-fiction
+    steps:
+      - intent: self_help
+      - action: utter_self_help
+      - intent: non_fiction
+      - action: utter_non_fiction

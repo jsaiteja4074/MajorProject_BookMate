@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMate Chatbot</title>
+    <style>
+        /* Styles for chatbot UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #c7f5fa, #e2fcf7);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #74d4e0;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        .chatbox {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-box-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007e92;
+        }
+
+        .chat-box-container .message {
+            margin-bottom: 10px;
+        }
+
+        .chat-box-container .user-message {
+            text-align: right;
+            color: #007e92;
+        }
+
+        .chat-box-container .bot-message {
+            text-align: left;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 20%;
+            padding: 10px;
+            background-color: #007e92;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #74d4e0;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chat with BookMate</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <!-- <a href="/chatbot">Let's Chat!</a> -->
+        <a href="/contactus">Contact</a>
+    </nav>
+
+    <div class="chatbox">
+        <div class="chat-box-container" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+
+        <div>
+            <input type="text" id="user-input" placeholder="Ask BookMate anything...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 BookMate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById("user-input");
+            const message = input.value;
+            input.value = "";
+
+            if (message) {
+                const chatBox = document.getElementById("chat-box");
+
+                // Display user's message
+                chatBox.innerHTML += `<div class="message user-message">You: ${message}</div>`;
+
+                // Send message to backend (Flask API)
+                const response = await fetch("/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ message }),
+                });
+
+                const data = await response.json();
+                if (data.responses) {
+                    // Display bot's response
+                    data.responses.forEach(response => {
+                        chatBox.innerHTML += `<div class="message bot-message">Bot: ${response}</div>`;
+                    });
+                } else {
+                    chatBox.innerHTML += `<div class="message bot-message">Bot: ${data.error}</div>`;
+                }
+
+                // Scroll to the bottom of the chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

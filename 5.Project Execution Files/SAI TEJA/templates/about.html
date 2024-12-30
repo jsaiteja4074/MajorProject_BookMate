@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMate - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #c7f5fa, #e2fcf7);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #74d4e0;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007e92;
+        }
+
+        nav a.active {
+            color: #007e92;
+            text-decoration: underline;
+        }
+
+        .about-section {
+            margin: 30px;
+            padding: 20px;
+            background-color: #c7f5fa;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            color: #007e92;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .about-image {
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #74d4e0;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About BookMate</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about" class="active">About</a>
+        <a href="/chatbot">Let's Chat</a>
+        <a href="/contactus">Contact</a>
+    </nav>
+
+    <section class="about-section">
+        <h2>About BookMate</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>BookMate is an intelligent chatbot designed to assist you in discovering new books to read. Whether you're looking for a classic novel, a thrilling adventure, or a thought-provoking biography, BookMate can guide you with personalized recommendations based on your preferences. Our goal is to make book discovery easier and more enjoyable for everyone.</p>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='imgs/bookabout.jpg') }}" alt="Book illustration">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 BookMate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

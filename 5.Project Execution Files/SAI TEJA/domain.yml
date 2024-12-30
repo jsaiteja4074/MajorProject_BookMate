@@ -1,0 +1,156 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - fiction
+  - poetry
+  - children_animation
+  - drama
+  - graphic
+  - adventure
+  - horror
+  - mystery
+  - fantasy
+  - thriller
+  - psychological_thriller
+  - romance
+  - self_help
+  - non_fiction
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you? I am BookMate, your book recommendation assistant!"
+
+  utter_goodbye:
+    - text: "Goodbye! Happy reading!"
+
+  utter_affirm:
+    - text: "Great!"
+
+  utter_deny:
+    - text: "No problem, let me know how I can help!"
+
+  utter_happy:
+    - text: "Great to hear! How can I assist you today?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_fiction:
+    - text: |
+        Sure thing! Here are some captivating fiction books for you to explore:
+        - The Night Circus by Erin Morgenstern
+        - Where the Crawdads Sing by Delia Owens
+        - The Silent Patient by Alex Michaelides
+        - The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid
+        - Anxious People by Fredrik Backman
+
+  utter_poetry:
+    - text: |
+        Absolutely! Here are some beautiful poetry books:
+        - Home Body by Rupi Kaur
+        - Dearly by Margaret Atwood
+        - The Tradition by Jericho Brown
+        - Postcolonial Love Poem by Natalie Diaz
+
+  utter_children_animation:
+    - text: |
+        Here are some delightful children's animation books/movies for kids:
+        - The Gruffalo by Julia Donaldson
+        - Moana (Disney Animation)
+        - Zootopia (Disney Animation)
+        - Frozen (Disney Animation)
+
+  utter_drama:
+    - text: |
+        Here are some drama books you might enjoy:
+        - A Thousand Splendid Suns by Khaled Hosseini
+        - The Great Alone by Kristin Hannah
+        - The Kite Runner by Khaled Hosseini
+
+  utter_graphic:
+    - text: |
+        Here are some graphic novels you might like:
+        - Maus by Art Spiegelman
+        - Persepolis by Marjane Satrapi
+        - Watchmen by Alan Moore
+
+  utter_adventure:
+    - text: |
+        Here are some exciting adventure books for you:
+        - Into the Wild by Jon Krakauer
+        - Life of Pi by Yann Martel
+        - The Hobbit by J.R.R. Tolkien
+
+  utter_horror:
+    - text: |
+        Here are some spine-chilling horror books:
+        - The Shining by Stephen King
+        - House of Leaves by Mark Z. Danielewski
+        - The Haunting of Hill House by Shirley Jackson
+
+  utter_mystery:
+    - text: |
+        Here are some gripping mystery books:
+        - Gone Girl by Gillian Flynn
+        - Big Little Lies by Liane Moriarty
+        - The Girl with the Dragon Tattoo by Stieg Larsson
+
+  utter_fantasy:
+    - text: |
+        Here are some magical fantasy books:
+        - Harry Potter Series by J.K. Rowling
+        - The Name of the Wind by Patrick Rothfuss
+        - The Way of Kings by Brandon Sanderson
+
+  utter_thriller:
+    - text: |
+        Here are some thrilling reads:
+        - The Girl on the Train by Paula Hawkins
+        - The Silent Patient by Alex Michaelides
+        - Behind Closed Doors by B.A. Paris
+
+  utter_psychological_thriller:
+    - text: |
+        Here are some psychological thriller books:
+        - Gone Girl by Gillian Flynn
+        - The Woman in the Window by A.J. Finn
+        - The Couple Next Door by Shari Lapena
+
+  utter_romance:
+    - text: |
+        Here are some romantic reads:
+        - Pride and Prejudice by Jane Austen
+        - Me Before You by Jojo Moyes
+        - The Notebook by Nicholas Sparks
+
+  utter_self_help:
+    - text: |
+        Here are some life-changing self-help books:
+        - Atomic Habits by James Clear
+        - The Subtle Art of Not Giving a F*ck by Mark Manson
+        - How to Win Friends and Influence People by Dale Carnegie
+
+  utter_non_fiction:
+    - text: |
+        Here are some fascinating non-fiction reads:
+        - Sapiens by Yuval Noah Harari
+        - Educated by Tara Westover
+        - Becoming by Michelle Obama
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

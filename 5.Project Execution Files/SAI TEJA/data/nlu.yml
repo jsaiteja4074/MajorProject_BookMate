@@ -1,0 +1,213 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremely sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: fiction
+    examples: |
+      - What fiction books do you recommend?
+      - Can you suggest some good fiction reads?
+      - Any favorite fiction novels you'd recommend?
+      - I'm interested in mystery/thriller/fantasy/science fiction/historical fiction. Any recommendations?
+      - Do you have any favorite fiction books in the romance/dystopian/urban fantasy genre?
+      - Who are some notable fiction authors you admire?
+      - Can you suggest books similar to those by [author's name] in the fiction genre?
+      - Any recommendations for fiction books in the style of [author's name]?
+      - Looking for fiction books with themes of friendship/coming-of-age/love and betrayal.
+      - What type of fiction do you usually enjoy reading?
+
+  - intent: poetry
+    examples: |
+      - Can you suggest any modern poetry collections known for their lyrical beauty?
+      - What are some classic poetry anthologies that every poetry enthusiast should read?
+      - I'm in the mood for poetry that explores themes of love and longing. Any recommendations?
+      - Who are some renowned poets known for their contributions to contemporary poetry?
+      - Can you recommend any poetry books that delve into social issues or cultural identity?
+
+  - intent: adventure
+    examples: |
+      - I'm looking for an adventure book.
+      - Can you recommend some adventure novels?
+      - Any great books in the adventure genre?
+      - Looking for an exciting adventure book to read.
+
+  - intent: children_animation
+    examples: |
+      - Do you have recommendations for children's animated movies?
+      - Can you suggest some good children's animation books?
+      - Any suggestions for animated movies for kids?
+      - I'm looking for some fun children's animations to watch.
+
+  - intent: drama
+    examples: |
+      - Can you recommend a good drama novel?
+      - What are some must-read drama books?
+      - Any good drama books for me to check out?
+      - Looking for some emotional and compelling drama books.
+
+  - intent: graphic
+    examples: |
+      - Can you suggest any graphic novels?
+      - What are some great graphic novels to read?
+      - Looking for an interesting graphic novel.
+      - I love graphic novels! Any good ones to check out?
+
+  - intent: horror
+    examples: |
+      - Recommend some horror books.
+      - Suggest me some horror genre books.
+      - I want to read horror books.
+      - Do you have any horror novels?
+      - What are the scariest books?
+      - Horror book recommendations?
+      - Any horror stories you can suggest?
+
+  - intent: mystery
+    examples: |
+      - Suggest some mystery books.
+      - What mystery novels do you recommend?
+      - Can you show me mystery books?
+      - Recommend mystery stories.
+      - I love mystery novels, suggest some.
+      - Any mystery book suggestions?
+
+  - intent: fantasy
+    examples: |
+      - Recommend some fantasy books.
+      - What fantasy novels do you have?
+      - Suggest some fantasy books to read.
+      - I want to explore fantasy books.
+      - Show me fantasy genre recommendations.
+      - Best fantasy books to read?
+
+  - intent: thriller
+    examples: |
+      - Can you recommend some thriller books?
+      - Suggest thriller stories.
+      - What thriller novels do you have?
+      - Recommend me thriller genre books.
+      - Show me thriller books.
+      - Any thrilling book suggestions?
+
+  - intent: psychological_thriller
+    examples: |
+      - Recommend psychological thrillers.
+      - What are the best psychological thrillers?
+      - Can you suggest psychological thriller novels?
+      - Show me books on psychological thrillers.
+      - I want to read psychological thrillers.
+      - Psychological thriller recommendations?
+
+  - intent: romance
+    examples: |
+      - Recommend some romance books.
+      - I want to read romance novels.
+      - Can you suggest romantic stories?
+      - What are the best romance novels?
+      - Show me romance book recommendations.
+      - Any good romance novels?
+
+  - intent: self_help
+    examples: |
+      - Recommend self-help books.
+      - I need some self-help book recommendations.
+      - Can you show me self-help books?
+      - What are the best self-help books?
+      - Suggest me some self-help books.
+      - Any motivational or self-help book suggestions?
+
+  - intent: non_fiction
+    examples: |
+      - Recommend non-fiction books.
+      - Can you suggest some non-fiction novels?
+      - I want to read non-fiction stories.
+      - Show me non-fiction book recommendations.
+      - Any good non-fiction books?
+      - Suggest me some interesting non-fiction reads.
